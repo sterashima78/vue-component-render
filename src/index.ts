@@ -75,7 +75,7 @@ type NodeRenderFactory = (
 ) => NodeRender;
 export const nodeRenderFactory: NodeRenderFactory = (h, converter) => {
   const render = (d: NodeTree): VNode => {
-    const { tag, data } = converter(d.value as EleNode);
+    const { tag, data } = converter(d.value);
     return h(
       tag,
       {

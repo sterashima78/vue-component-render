@@ -7,15 +7,15 @@
   "typings": "dist/types/main.d.ts",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name vue-component-render ./src/main.ts",
+    "build": "vue-cli-service build --target lib --name vue-component-render ./src/index.ts",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "core-js": "^3.6.5",
-    "fp-ts": "^2.9.1",
-    "vue": "^2.6.11"
+    "core-js": "^3.6.5"
+  },
+  "peerDependencies": {
+    "vue": "^2.6.12"
   },
   "devDependencies": {
     "@types/jest": "^24.0.19",
