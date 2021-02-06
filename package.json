@@ -1,7 +1,7 @@
 {
   "name": "@sterashima78/vue-component-render",
   "version": "0.0.1-alpha.1",
-  "author": "sterashima78",
+  "author": "sterashima",
   "main": "dist/vue-component-render.common.js",
   "unpkg": "./dist/vue-component-render.umd.min.js",
   "jsdelivr": "./dist/vue-component-render.umd.min.js",
