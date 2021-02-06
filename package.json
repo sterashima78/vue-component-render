@@ -6,7 +6,6 @@
   "unpkg": "./dist/vue-component-render.umd.min.js",
   "jsdelivr": "./dist/vue-component-render.umd.min.js",
   "typings": "dist/types/main.d.ts",
-  "private": true,
   "files": [
     "/dist/*.js",
     "/dist/*.map",
