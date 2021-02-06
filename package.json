@@ -5,7 +5,7 @@
   "main": "dist/vue-component-render.common.js",
   "unpkg": "./dist/vue-component-render.umd.min.js",
   "jsdelivr": "./dist/vue-component-render.umd.min.js",
-  "typings": "dist/types/main.d.ts",
+  "typings": "dist/types/index.d.ts",
   "files": [
     "/dist/*.js",
     "/dist/*.map",
