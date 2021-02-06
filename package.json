@@ -1,5 +1,5 @@
 {
-  "name": "@sterashima78/vue-component-render",
+  "name": "@sterashima/vue-component-render",
   "version": "0.0.1-alpha.3",
   "author": "sterashima",
   "main": "dist/vue-component-render.common.js",
