@@ -1,11 +1,17 @@
 {
   "name": "@sterashima78/vue-component-render",
   "version": "0.0.1-alpha.0",
+  "author": "sterashima78",
   "main": "dist/vue-component-render.common.js",
   "unpkg": "./dist/vue-component-render.umd.min.js",
   "jsdelivr": "./dist/vue-component-render.umd.min.js",
   "typings": "dist/types/main.d.ts",
   "private": true,
+  "files": [
+    "/dist/*.js",
+    "/dist/*.map",
+    "/dist/types/*.d.ts"
+  ],
   "scripts": {
     "build:type": "tsc --emitDeclarationOnly",
     "build:lib": "vue-cli-service build --target lib --name vue-component-render ./src/index.ts",
