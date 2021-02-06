@@ -28,7 +28,7 @@ export type NodeTreeChildren = Array<string | NodeTree>;
 
 export type NodeTree = {
   value: Readonly<EleNode>;
-  forest: NodeTreeChildren;
+  children: NodeTreeChildren;
 };
 
 export type NodeData = {
@@ -43,7 +43,7 @@ export type MakeNodeTree = (
 
 export const makeNodeTree: MakeNodeTree = (value, children) => ({
   value,
-  forest: children
+  children
 });
 
 type ToNodeData = (node: EleNode) => NodeData;
@@ -70,10 +70,9 @@ export const nodeDataConverterFactory: NodeDataConverterFactory = processer => n
 };
 type NodeRender = (data: NodeTree) => VNode;
 type NodeRenderFactory = (
-  h: CreateElement,
   converter: ToNodeData
-) => NodeRender;
-export const nodeRenderFactory: NodeRenderFactory = (h, converter) => {
+) => (h: CreateElement) => NodeRender;
+export const nodeRenderFactory: NodeRenderFactory = converter => h => {
   const render = (d: NodeTree): VNode => {
     const { tag, data } = converter(d.value);
     return h(
@@ -81,7 +80,7 @@ export const nodeRenderFactory: NodeRenderFactory = (h, converter) => {
       {
         ...data
       },
-      d.forest.map(i => (typeof i === "string" ? i : render(i)))
+      d.children.map(i => (typeof i === "string" ? i : render(i)))
     );
   };
   return render;
